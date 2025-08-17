@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import ProductPage from "./pages/ProductPage";
 import Navbar from "./components/Navbar";
+import {Toaster} from "react-hot-toast";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/product/:id" element={<ProductPage />} />
         </Routes>
+        <Toaster />
       </div>
     </Router>
   );

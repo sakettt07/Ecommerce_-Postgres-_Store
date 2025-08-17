@@ -4,8 +4,6 @@ const getProducts=async(req,res)=>{
     try {
         const products=await sql`
         SELECT * FROM products ORDER BY created_at DESC`;
-
-        console.log("fetched products",products);
         res.status(200).json({success:true,data:products});
     } catch (error) {
         console.log(error);
@@ -22,7 +20,6 @@ const getProduct=async(req,res)=>{
                 message:"Product doesn't exist"
             })
         }
-        console.log(`Product with id: ${id} fetched successfully`);
         res.status(200).json({success:true,data:product[0]});
     } catch (error) {
         console.log(error);
