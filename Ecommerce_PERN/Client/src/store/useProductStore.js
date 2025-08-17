@@ -2,7 +2,7 @@ import { create } from "zustand";
 import axios, { formToJSON } from "axios";
 import toast from "react-hot-toast";
 
-const BASE_URL = "https://ecommerce-store-backend-eo85.onrender.com/";
+const BASE_URL = "https://ecommerce-store-backend-eo85.onrender.com";
 
 export const useProductStore = create((set, get) => ({
     products: [],
